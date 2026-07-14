@@ -44,17 +44,17 @@ const translations = {
     "exp.role1": "Frontend Developer",
     "exp.org1": "CC Tech",
     "exp.desc1":
-      "Develope and maintain over 10 slot games",
+      "Develop and maintain over 10 slot games",
     "exp.period2": "2021 — 2025",
     "exp.role2": "Frontend Developer",
     "exp.org2": "Bang Bang Games",
     "exp.desc2":
-      "Develope and maintain over 10 slot games",
+      "Develop and maintain over 10 slot games",
     "exp.period3": "2019 — 2021",
     "exp.role3": "Frontend Developer",
     "exp.org3": "Riversense Games",
     "exp.desc3":
-      "Develope and maintain mahjong games, lottery websites, slot games etc.",
+      "Develop and maintain mahjong games, lottery websites, slot games etc.",
 
     "edu.title": "Education",
     "edu.period1": "2018 — 2019",
