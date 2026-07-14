@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio — Patrick Yang" />
+  <title data-i18n="meta.title">Patrick Yang — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#" class="brand">楊宗翰</a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-switch__btn" data-lang="en" type="button">EN</button>
+          <button class="lang-switch__btn" data-lang="zh-Hant" type="button">繁中</button>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title reveal" data-i18n="hero.title">
+          Placeholder headline that says what you do
+        </h1>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. A short
+          two-line introduction goes here — who you are, what you build, and the
+          kind of work you want more of.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#work" class="btn btn--primary" data-i18n="hero.viewWork">View work</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.getInTouch">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div class="section__head">
+          <span class="section__num">01</span>
+          <h2 class="section__title" data-i18n="about.title">About</h2>
+        </div>
+        <div class="prose reveal">
+          <p data-i18n="about.p1">
+            Placeholder paragraph. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
+          <p data-i18n="about.p2">
+            A second paragraph for a bit more depth — background, focus areas,
+            or a sentence of personality. Quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <ul class="skill-list">
+            <li data-i18n="skill.1">Skill / tool one</li>
+            <li data-i18n="skill.2">Skill / tool two</li>
+            <li data-i18n="skill.3">Skill / tool three</li>
+            <li data-i18n="skill.4">Skill / tool four</li>
+            <li data-i18n="skill.5">Skill / tool five</li>
+            <li data-i18n="skill.6">Skill / tool six</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="section section--alt">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <span class="section__num">02</span>
+          <h2 class="section__title" data-i18n="work.title">Selected work</h2>
+        </div>
+
+        <div class="work-grid">
+          <!-- Project card (repeat as needed) -->
+          <article class="card reveal">
+            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__body">
+              <p class="card__meta" data-i18n="card.meta">Category · Year</p>
+              <h3 class="card__title" data-i18n="card.title">Project title placeholder</h3>
+              <p class="card__desc" data-i18n="card.desc">
+                One or two lines describing the project, the problem, and your
+                role. Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <a href="#" class="card__link" data-i18n="card.link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__body">
+              <p class="card__meta" data-i18n="card.meta">Category · Year</p>
+              <h3 class="card__title" data-i18n="card.title">Project title placeholder</h3>
+              <p class="card__desc" data-i18n="card.desc">
+                One or two lines describing the project, the problem, and your
+                role. Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <a href="#" class="card__link" data-i18n="card.link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__body">
+              <p class="card__meta" data-i18n="card.meta">Category · Year</p>
+              <h3 class="card__title" data-i18n="card.title">Project title placeholder</h3>
+              <p class="card__desc" data-i18n="card.desc">
+                One or two lines describing the project, the problem, and your
+                role. Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <a href="#" class="card__link" data-i18n="card.link">View project →</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__body">
+              <p class="card__meta" data-i18n="card.meta">Category · Year</p>
+              <h3 class="card__title" data-i18n="card.title">Project title placeholder</h3>
+              <p class="card__desc" data-i18n="card.desc">
+                One or two lines describing the project, the problem, and your
+                role. Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <a href="#" class="card__link" data-i18n="card.link">View project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <span class="section__num">03</span>
+          <h2 class="section__title" data-i18n="exp.title">Experience</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__period" data-i18n="exp.period1">2023 — Present</div>
+            <div class="timeline__body">
+              <h3 class="timeline__role" data-i18n="exp.role1">Role / Title</h3>
+              <p class="timeline__org" data-i18n="exp.org1">Company or organization</p>
+              <p class="timeline__desc" data-i18n="exp.desc1">
+                Placeholder line about responsibilities and impact. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__period" data-i18n="exp.period2">2021 — 2023</div>
+            <div class="timeline__body">
+              <h3 class="timeline__role" data-i18n="exp.role2">Role / Title</h3>
+              <p class="timeline__org" data-i18n="exp.org2">Company or organization</p>
+              <p class="timeline__desc" data-i18n="exp.desc2">
+                Placeholder line about responsibilities and impact. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <div class="timeline__period" data-i18n="exp.period3">2019 — 2021</div>
+            <div class="timeline__body">
+              <h3 class="timeline__role" data-i18n="exp.role3">Role / Title</h3>
+              <p class="timeline__org" data-i18n="exp.org3">Company or organization</p>
+              <p class="timeline__desc" data-i18n="exp.desc3">
+                Placeholder line about responsibilities and impact. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section--alt">
+      <div class="container contact">
+        <span class="section__num">04</span>
+        <h2 class="contact__title" data-i18n="contact.title">Let's work together</h2>
+        <a href="mailto:yangerplato3465@gamil.com" class="btn btn--primary btn--lg"
+          >yangerplato3465@gamil.com</a
+        >
+        <ul class="social">
+          <li><a href="https://github.com/yangerplato3465?tab=repositories">GitHub</a></li>
+          <li><a href="https://chowdog.itch.io/">Itch.io</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
