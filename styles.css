@@ -648,6 +648,72 @@ body.modal-open {
   font-size: 0.95rem;
 }
 
+/* ---------- Sub-sections (Education / Certificates) ---------- */
+.subsection {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  max-width: 780px;
+}
+.subsection__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.subsection__title::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Certificates */
+.cert-list {
+  list-style: none;
+  max-width: 780px;
+}
+.cert-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.1rem;
+  border-top: 1px solid var(--line);
+}
+.cert-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.cert-item__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.cert-item__issuer {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+.cert-item__date {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .cert-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
 /* ---------- Contact ---------- */
 .contact {
   text-align: center;

@@ -56,6 +56,18 @@ const translations = {
     "exp.desc3":
       "Develope and maintain mahjong games, lottery websites, slot games etc.",
 
+    "edu.title": "Education",
+    "edu.period1": "2018 — 2019",
+    "edu.school1": "Coventry University",
+    "edu.degree1": "Software Development",
+    "edu.period2": "2014 — 2018",
+    "edu.school2": "Feng Chia University",
+    "edu.degree2": "Information Engineering",
+
+    "cert.title": "Certificates",
+    "cert.name1": "TOEIC 870",
+    "cert.name2": "IELTS 7.5",
+
     "contact.title": "Contact me",
   },
 
@@ -105,6 +117,18 @@ const translations = {
     "exp.role3": "遊戲前端工程師",
     "exp.org3": "遊戲河流",
     "exp.desc3": "遊戲前端開發，製作過麻將遊戲，彩票網站，拉霸遊戲等等",
+
+    "edu.title": "學歷",
+    "edu.period1": "2018 — 2019",
+    "edu.school1": "Coventry University",
+    "edu.degree1": "軟體開發",
+    "edu.period2": "2014 — 2018",
+    "edu.school2": "逢甲大學",
+    "edu.degree2": "資訊工程",
+
+    "cert.title": "證照",
+    "cert.name1": "多益測驗 TOEIC 870",
+    "cert.name2": "雅思測驗 IELTS 7.5",
 
     "contact.title": "聯絡我",
   },
