@@ -80,7 +80,7 @@ const translations = {
     "nav.experience": "經歷",
     "nav.contact": "聯絡",
 
-    "hero.title": "我是一名前端工程師",
+    "hero.title": "我是一名遊戲前端工程師",
     "hero.lead":
       "獨立遊戲開發者，遊戲設計，網頁前端工程師",
     "hero.viewWork": "查看作品",
@@ -90,7 +90,7 @@ const translations = {
     "about.p1":
       "擁有良好的程式思維與基礎理解力，能流暢地與技術團隊溝通並靈活運用 AI 工具增加工作效率。對交辦任務反應迅速、執行力極佳，致力於用高效的方式解決問題",
     "about.p2":
-      "對遊戲開發有熱情，擅長使用Godot，PIXIjs等等開發遊戲，對於全新陌生的開發工具和框架都能快速上手。擁有手機雙平台開發上架及維護經驗。",
+      "對遊戲開發有熱情，擅長使用Godot，PIXIjs，Unity等等開發遊戲，對於全新陌生的開發工具和框架都能快速上手。擁有手機雙平台開發上架及維護經驗。前端經驗也包含Vue，React，Flutter等等框架。",
     "skill.1": "TypeScript",
     "skill.2": "JavaScript",
     "skill.3": "Cursor",
@@ -188,9 +188,14 @@ langButtons.forEach((btn) =>
   btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang")))
 );
 
-// ---------- Current year in footer ----------
+// ---------- Footer: year + version from config ----------
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+const versionEl = document.getElementById("app-version");
+if (versionEl && typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.version) {
+  versionEl.textContent = "v" + SITE_CONFIG.version;
+}
 
 // ---------- Header border once scrolled ----------
 const header = document.querySelector(".site-header");
@@ -282,7 +287,7 @@ const games = [
     path: "games/horrorbuild/index.html",
     cover: "assets/covers/horrorbuild.png",
     aspect: "16 / 9",
-    title: { en: "Horrorbuild", "zh-Hant": "Horrorbuild" },
+    title: { en: "Don't Look Back", "zh-Hant": "Don't Look Back" },
     meta: { en: "Godot", "zh-Hant": "Godot" },
     desc: {
       en: "A 3D horror first person survival game.",
