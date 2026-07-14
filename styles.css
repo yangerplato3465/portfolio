@@ -452,6 +452,161 @@ a {
   text-underline-offset: 3px;
 }
 
+/* ---------- Game cards ---------- */
+.card--game .card__media {
+  overflow: hidden;
+  cursor: pointer;
+}
+.card--game .card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Replace the generic "Image" label with a play affordance on hover. */
+.card--game .card__media::after {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+  background: rgba(18, 16, 14, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.card--game:hover .card__media::after,
+.card--game .card__media:focus-visible::after {
+  opacity: 1;
+}
+.play-btn {
+  margin-top: 0.25rem;
+}
+.work-empty {
+  color: var(--ink-faint);
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+/* ---------- Game modal ---------- */
+body.modal-open {
+  overflow: hidden;
+}
+.game-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.5rem, 3vw, 2rem);
+}
+.game-modal[hidden] {
+  display: none;
+}
+.game-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 11, 10, 0.72);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.22s var(--ease);
+}
+.game-modal.is-open .game-modal__backdrop {
+  opacity: 1;
+}
+.game-modal__frame {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  transition: opacity 0.22s var(--ease), transform 0.22s var(--ease);
+}
+.game-modal.is-open .game-modal__frame {
+  opacity: 1;
+  transform: none;
+}
+.game-modal__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.6rem 0.5rem 1rem;
+  background: #17150f;
+  color: #f2efe9;
+}
+.game-modal__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: #f2efe9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.game-modal__actions {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+.game-modal__btn {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  color: #cfcabf;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.game-modal__btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.game-modal__stage {
+  position: relative;
+  aspect-ratio: var(--game-aspect, 16 / 9);
+  /* Sized to fit the viewport; per-game --game-vh and --game-maxw can override. */
+  width: min(
+    96vw,
+    calc(var(--game-vh, 80vh) * var(--game-aspect, 16 / 9)),
+    var(--game-maxw, 1180px)
+  );
+  background: #000;
+}
+.game-modal__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+/* Fullscreen: fill the screen and let the game engine letterbox itself. */
+.game-modal__frame:fullscreen {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background: #000;
+}
+.game-modal__frame:fullscreen .game-modal__stage {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  aspect-ratio: auto;
+  flex: 1 1 auto;
+}
+
 /* ---------- Timeline ---------- */
 .timeline {
   list-style: none;
